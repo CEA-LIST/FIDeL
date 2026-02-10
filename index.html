@@ -81,12 +81,16 @@
             </div>
   
             <div class="column has-text-centered">
-              <div class="publication-logos" style="display: flex; justify-content: center; align-items: center; gap: 30px; margin-top: 20px; flex-wrap: wrap;">
-                <img src="static/images/ICRA_logo.png" alt="ICRA" style="height: 50px;">
-                <img src="static/images/CEA.png" alt="CEA" style="height: 45px;">
-                <img src="static/images/INRIA.png" alt="INRIA" style="height: 35px;">
-                <img src="static/images/Univ_lorraine.png" alt="Univ Lorraine" style="height: 45px;">
-                <img src="static/images/Univ_Saclay.png" alt="Univ Saclay" style="height: 45px;">
+              <div class="publication-logos" style="display: flex; justify-content: center; align-items: center; gap: 40px; margin-top: 20px; flex-wrap: wrap;">
+                <img src="static/images/CEA.png" alt="CEA" style="height: 40px;">
+                <img src="static/images/Inria.png" alt="INRIA" style="height: 30px;">
+                <img src="static/images/Univ_lorraine.png" alt="Univ Lorraine" style="height: 40px;">
+                <img src="static/images/Univ_saclay.png" alt="Univ Saclay" style="height: 40px;">
+              </div>
+  
+              <div class="conference-logo" style="margin-top: 30px;">
+                <img src="static/images/ICRA_logo.png" alt="ICRA 2026" style="height: 80px; filter: grayscale(100%) brightness(0.5); opacity: 0.8;">
+                <p class="is-size-6" style="margin-top: 5px; font-weight: bold; color: #5a5a5a;">IEEE International Conference on Robotics and Automation (ICRA)</p>
               </div>
             </div>
 
@@ -178,18 +182,19 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Recent advances in Imitation Learning have significantly expanded the capabilities of autonomous robots.
-              However, their deployment is limited by the non-deterministic behavior of generative policies and the
-              overall lack of error-checking mechanisms on policies and their outcomes, especially in the presence of
-              unpredictable and out-of-distribution events. We propose \(\textbf{Safe-}\boldsymbol{\pi}\), a post-hoc
-              One-Class Anomaly Detection framework designed to enhance the safety of Imitation Learning policies, and
-              help identify their shortcomings. Taking inspiration from One-Class Visual Anomaly Detection, our method
-              builds a memory of nominal behaviors from expert demonstrations using Gaussian statistics over spatially
-              localized visual features, without requiring anomalous samples. During inference, the system monitors
-              robot perceptions in real time, identifying anomalies in both the robot's behavior and its environment. We
-              also introduce \( \textbf{BotFails} \), a multimodal dataset of real-world tasks for Anomaly Detection in
-              robotics, and demonstrate that \(\textbf{Safe-}\boldsymbol{\pi}\) outperforms state-of-the-art baselines,
-              offering robust and interpretable failure detection suitable for practical deployment.
+              Imitation learning (IL) policies in robotics deliver strong performance in controlled settings but remain 
+              brittle in real-world deployments: rare events such as hardware faults, defective parts, unexpected human 
+              actions, or any state that lies outside the training distribution can lead to failed executions. 
+              Vision-based Anomaly Detection (AD) methods emerged as an appropriate solution to detect these anomalous 
+              failure states but do not distinguish failures from benign deviations. We introduce \(\textbf{FIDeL}\) 
+              (Failure Identification in Demonstration Learning), a policy-independent failure detection module. 
+              Leveraging recent AD methods, FIDeL builds a compact representation of nominal demonstrations and aligns 
+              incoming observations via optimal transport matching to produce anomaly scores and heatmaps. Spatio-temporal 
+              thresholds are derived with an extension of conformal prediction, and a Vision Language Model (VLM) performs 
+              semantic filtering to discriminate benign anomalies from genuine failures. We also introduce \(\textbf{BotFails}\), 
+              a multimodal dataset of real-world tasks for failure detection in robotics. FIDeL consistently outperforms 
+              state-of-the-art baselines, yielding \(+5.30\%\) AUROC in anomaly detection and \(+17.38\%\) failure-detection accuracy 
+              on BotFails compared to existing methods.
             </p>
           </div>
         </div>
@@ -207,11 +212,10 @@
           <source src="static/videos/video_teaser.mp4" type="video/mp4">
         </video>
         <h2 class="subtitle has-text-centered">
-          We introduce Safe-\( \pi \), a framework aimed at improving the reliability and safety of Imitation
-          Learning-based
-          policies. After having aggregated expert demonstrations representations, it continuously extracts anomaly
-          scores from real time policy-robot interactions. When a significant deviation is detected, the system flags an
-          anomaly and generates a heatmap to localize anomaly.
+          We introduce FIDeL, a framework aimed at improving the reliability of Imitation
+          Learning-based policies. After having aggregated expert demonstrations representations, it continuously extracts anomaly
+          scores from real time policy-robot interactions. When a significant deviation is detected, the system flags a failure
+          and generates a heatmap to localize the failure.
         </h2>
       </div>
     </div>
