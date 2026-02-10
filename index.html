@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Stop Before You Break It: Leveraging One Class Anomaly Detection for Safer Imitation Learning Policies</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <!-- MathJax for LaTeX rendering -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Stop Before You Break It: Leveraging One Class Anomaly Detection
+              for Safer Imitation Learning Policies</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Anonymous</a><sup></sup></span>
+              <!--                <span class="author-block">
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <span class="author-block">
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>         -->
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Under Review, 2025<br></span>
+              <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+            </div>
+
+            <div class="is-size-5 under-construction">
+              <span class="author-block">(Website Under Construction)<br></span>
+              <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+            </div>
+
+            <!-- <div class="column has-text-centered">
+              <div class="publication-links">
+                
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                
+                <span class="link-block">
+                  <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Supplementary</span>
+                  </a>
+                </span>
+
+                
+                <span class="link-block">
+                  <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+
+                  <div class="has-text-centered" style="margin-top: 1em;">
+                    <img src="static/images/corl_logo.png" alt="Logo" style="height: 40px;">
+                  </div>
+
+                </span>
+              </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Video intro -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h2 class="title is-3"></h2>
+        <div id="videos-intro" class="intro results-intro" style="display: flex; justify-content: center;">
+          <div class="item item-video1" style="max-width: 100%; width: 80%;">
+            <video poster="" id="video1" autoplay controls muted loop
+              style="width: 100%; height: auto; border-radius: 10px;">
+
+              <source src="static/videos/intro.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End video intro -->
+
+
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Recent advances in Imitation Learning have significantly expanded the capabilities of autonomous robots.
+              However, their deployment is limited by the non-deterministic behavior of generative policies and the
+              overall lack of error-checking mechanisms on policies and their outcomes, especially in the presence of
+              unpredictable and out-of-distribution events. We propose \(\textbf{Safe-}\boldsymbol{\pi}\), a post-hoc
+              One-Class Anomaly Detection framework designed to enhance the safety of Imitation Learning policies, and
+              help identify their shortcomings. Taking inspiration from One-Class Visual Anomaly Detection, our method
+              builds a memory of nominal behaviors from expert demonstrations using Gaussian statistics over spatially
+              localized visual features, without requiring anomalous samples. During inference, the system monitors
+              robot perceptions in real time, identifying anomalies in both the robot's behavior and its environment. We
+              also introduce \( \textbf{BotFails} \), a multimodal dataset of real-world tasks for Anomaly Detection in
+              robotics, and demonstrate that \(\textbf{Safe-}\boldsymbol{\pi}\) outperforms state-of-the-art baselines,
+              offering robust and interpretable failure detection suitable for practical deployment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+  <!-- Teaser video-->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video poster="" id="tree" autoplay controls muted loop height="100%">
+          <!-- Your video here -->
+          <source src="static/videos/video_teaser.mp4" type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered">
+          We introduce Safe-\( \pi \), a framework aimed at improving the reliability and safety of Imitation
+          Learning-based
+          policies. After having aggregated expert demonstrations representations, it continuously extracts anomaly
+          scores from real time policy-robot interactions. When a significant deviation is detected, the system flags an
+          anomaly and generates a heatmap to localize anomaly.
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- End teaser video -->
+
+
+
+
+  <!-- Methodology -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Methodology</h2>
+          <div class="content has-text-justified">
+            <p>
+              Our method comprises two main stages: an offline preparation phase and an online inference phase. During
+              the offline phase, we process a dataset of expert demonstrations \( \mathcal{X}_N \), assumed to reflect
+              nominal behavior, by extracting feature representations from observations. These features are stored in a
+              memory buffer \( \mathcal{M} \), providing a compact statistical model of normal operation.
+              In the online phase, the AD module operates concurrently with the execution of the generative policy
+              \( f_\theta \). At each time step \( t \), the policy receives a multimodal observation \( O_t \) and
+              outputs an
+              action \( A_t = f_\theta(O_t) \). Prior to executing the action, \( O_t \) is encoded into the feature
+              space, and
+              an anomaly score is computed by comparing it to the distribution of features stored in \( \mathcal{M} \).
+              This
+              enables real-time monitoring of the system's behavior without interrupting the robot's control loop.
+              By decoupling the modeling of nominal behavior from online evaluation, the proposed two-stage architecture
+              ensures computational efficiency which enhance reliability by promptly detecting deviations from expected
+              operational patterns.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Methodology -->
+
+  <!-- Image section (just one image, no carousel) -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div class="single-image-display">
+          <div class="item">
+            <h2 class="title is-3"></h2>
+            <img src="static/images/method_big.png" alt="MY ALT TEXT" />
+            <h2 class="subtitle has-text-centered">
+              We introduce BotFails, a new dataset specifically designed for one-class multimodal anomaly detection in
+              robotics, incorporating vision, proprioception, and natural language instructions.
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experiments -->
+  <section class="section hero is-small">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">BotFails Dataset</h2>
+          <div class="content has-text-justified">
+            <p>
+              To rigorously evaluate the effectiveness of our AD approach, we introduce \( \textbf{BotFails} \), a
+              dedicated dataset specifically designed for robotic AD tasks. Our method is benchmarked on this dataset
+              alongside several
+              state-of-the-art baseline methods adapted to our experimental setting.
+              The BotFails dataset comprises a diverse set of tasks, each designed to represent a specific human
+              activity or interaction scenario within a controlled environment. In total, the dataset contains 414,359
+              annotated frames across
+              646 video sequences, offering a rich and varied benchmark for evaluating anomaly detection systems.
+              Each task in the dataset is associated with a predefined set of anomalous behaviors. These anomalies are
+              deliberately introduced to mimic realistic deviations from normal patterns, such as incorrect object
+              handling, wrong execution of the expected task, or unexpected presence of foreign objects.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Experiments -->
+
+
+  <!-- Image BotFails -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div class="single-image-display">
+          <div class="item">
+            <img src="static/images/BotFails.png" alt="MY ALT TEXT" />
+            <h2 class="subtitle has-text-centered">
+              We introduce BotFails, a new dataset specifically designed for one-class multimodal anomaly detection in
+              robotics, incorporating vision, proprioception, and natural language instructions.
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Results -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Results</h2>
+          <div class="content has-text-justified">
+            <p>
+              We evaluated Safe-\( \pi \) along with several SotA baselines on BotFails. Safe-\( \pi \) delivers the
+              highest
+              overall performance, achieving an average AUROC of \( \textbf{70.5%} \) and F1@Opt of \( \textbf{62.9%}
+              \),
+              exceeding the best-performing baseline, \( \textit{logpZO} \), by more than 5 points in AUROC and 3 points
+              in
+              F1.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Results -->
+
+  <!-- Image Results -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <div class="single-image-display">
+          <div class="item" style="max-width: 100%; width: 100%;">
+            <img src="static/images/Results.png" alt="MY ALT TEXT" class="mx-auto"
+              style="max-width: 100%; height: auto;" />
+
+            <h2 class="subtitle has-text-centered">
+              mean AUROC and mean F1-score at optimal threshold ( \(\textbf{in %}\)), as well as inference time
+              (\(\textbf{in ms}\), for anomaly detection only and full pipeline including the encoder), evaluated on the
+              \( \textit{BotFails} \) dataset across various AD methods. Experiments were conducted on an NVIDIA GeForce
+              RTX
+              3090 GPU and an AMD Ryzen 9 5900X CPU (24 threads @ 3.70GHz). Best results are highlighted in bold. Each
+              task score reflects performance over multiple rollouts (several dozens per task).
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Video Grid Section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">Results videos : Safe-\(\pi\) evaluation with the BotFails dataset</h2>
+      <div class="columns is-multiline is-centered">
+
+        <!-- Video Block -->
+        <div class="column is-half has-text-centered">
+          <figure>
+            <video controls muted loop autoplay width="100%">
+              <source src="static/videos/pouring_coffee_1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <figcaption class="mt-2">Pouring coffee</figcaption>
+          </figure>
+        </div>
+
+        <div class="column is-half has-text-centered">
+          <figure>
+            <video controls muted loop autoplay width="100%">
+              <source src="static/videos/pouring_coffee_1.mp4" type="video/mp4">
+            </video>
+            <figcaption class="mt-2">Pouring coffee</figcaption>
+          </figure>
+        </div>
+
+        <div class="column is-half has-text-centered">
+          <figure>
+            <video controls muted loop autoplay width="100%">
+              <source src="static/videos/pouring_coffee_1.mp4" type="video/mp4">
+            </video>
+            <figcaption class="mt-2">Making coffee</figcaption>
+          </figure>
+        </div>
+
+        <!-- Add more videos the same way -->
+        <div class="column is-half has-text-centered">
+          <figure>
+            <video controls muted loop autoplay width="100%">
+              <source src="static/videos/pouring_coffee_1.mp4" type="video/mp4">
+            </video>
+            <figcaption class="mt-2">Making coffee</figcaption>
+          </figure>
+        </div>
+
+        <div class="column is-half has-text-centered">
+          <figure>
+            <video controls muted loop autoplay width="100%">
+              <source src="static/videos/pouring_coffee_1.mp4" type="video/mp4">
+            </video>
+            <figcaption class="mt-2">Soldering</figcaption>
+          </figure>
+        </div>
+
+        <div class="column is-half has-text-centered">
+          <figure>
+            <video controls muted loop autoplay width="100%">
+              <source src="static/videos/pouring_coffee_1.mp4" type="video/mp4">
+            </video>
+            <figcaption class="mt-2">Soldering</figcaption>
+          </figure>
+        </div>
+
+        <div class="column is-half has-text-centered">
+          <figure>
+            <video controls muted loop autoplay width="100%">
+              <source src="static/videos/pouring_coffee_1.mp4" type="video/mp4">
+            </video>
+            <figcaption class="mt-2">Robothon hatch and probe</figcaption>
+          </figure>
+        </div>
+
+        <div class="column is-half has-text-centered">
+          <figure>
+            <video controls muted loop autoplay width="100%">
+              <source src="static/videos/pouring_coffee_1.mp4" type="video/mp4">
+            </video>
+            <figcaption class="mt-2">Robothon hatch and probe</figcaption>
+          </figure>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  <!-- Youtube video -->
+  <!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      
+      <h2 class="title is-3">Video Presentation</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <div class="publication-video">
+            <iframe
+              width="100%"
+              height="480"
+              src="https://www.youtube.com/embed/izBMkmJwUgw?autoplay=1&mute=1"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+  <!-- End youtube video -->
+
+
+  <!-- Video carousel -->
+  <!--   <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Another Carousel</h2>
+        <div id="videos-carousel" class="carousel results-carousel">
+          <div class="item item-video1">
+            <video poster="" id="video1" autoplay controls muted loop height="100%">
+              
+              <source src="static/videos/carousel1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop height="100%">
+              
+              <source src="static/videos/carousel2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video3" autoplay controls muted loop height="100%">\
+              
+              <source src="static/videos/carousel3.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- End video carousel -->
+
+
+
+
+
+
+  <!-- Paper poster -->
+  <!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section> -->
+  <!--End paper poster -->
+
+
+  <!--BibTex citation -->
+  <!-- <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>BibTex Code Here</code></pre>
+    </div>
+  </section> -->
+  <!--End BibTex citation -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the source code of this website, we just ask that you link back to this page in the
+              footer. <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
