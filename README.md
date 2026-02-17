@@ -1,50 +1,52 @@
-# Academic Project Page Template
-This is an academic paper project page template.
+# Failure Identification in Imitation Learning via Statistical and Semantic Filtering (FIDeL)
+
+This repository hosts the **project webpage** and supplementary materials for the paper:
+
+**Failure Identification in Imitation Learning via Statistical and Semantic Filtering**  
+Quentin Rolland, Fabrice Mayran de Chamisso, Jean-Baptiste Mouret  
+*IEEE International Conference on Robotics and Automation (ICRA), 2026*
+
+link to the site : **https://cea-list.github.io/FIDeL/**
+---
+
+## Overview
+
+Imitation Learning (IL) policies are brittle to rare or out-of-distribution events in real-world robotic deployments.  
+We introduce **FIDeL**, a policy-agnostic failure identification framework that combines:
+
+- Vision-based anomaly detection
+- Optimal transport alignment with expert demonstrations
+- Spatio-temporal thresholding via conformal prediction
+- Semantic filtering using Vision-Language Models (VLMs)
+
+FIDeL detects, localizes, and semantically filters failures in real time, without interfering with policy execution.
+
+---
+
+## BotFails Dataset
+
+We also introduce **BotFails**, a multimodal dataset for robotic failure detection:
+
+- Vision, proprioception, and language instructions
+- 646 video sequences
+- 414,359 annotated frames
+- Real-world manipulation and interaction tasks
+- Explicit failure and benign anomaly annotations
+
+---
+
+## Results
+
+FIDeL outperforms state-of-the-art anomaly detection baselines on BotFails, achieving:
+
+- **+5.30% AUROC** in anomaly detection
+- **+17.38% accuracy** in failure identification
+
+Qualitative results and videos are available on the project webpage.
+
+---
 
 
-Example project pages built using this template are:
-- https://horwitz.ai/probex
-- https://vision.huji.ac.il/probegen
-- https://horwitz.ai/mother
-- https://horwitz.ai/spectral_detuning
-- https://vision.huji.ac.il/ladeda
-- https://vision.huji.ac.il/dsire
-- https://horwitz.ai/podd
-- https://dreamix-video-editing.github.io
-- https://horwitz.ai/conffusion
-- https://horwitz.ai/3d_ads/
-- https://vision.huji.ac.il/ssrl_ad
-- https://vision.huji.ac.il/deepsim
-
-
-
-## Start using the template
-To start using the template click on `Use this Template`.
-
-The template uses html for controlling the content and css for controlling the style. 
-To edit the websites contents edit the `index.html` file. It contains different HTML "building blocks", use whichever ones you need and comment out the rest.  
-
-**IMPORTANT!** Make sure to replace the `favicon.ico` under `static/images/` with one of your own, otherwise your favicon is going to be a dreambooth image of me.
-
-## Components
-- Teaser video
-- Images Carousel
-- Youtube embedding
-- Video Carousel
-- PDF Poster
-- Bibtex citation
-
-## Tips:
-- The `index.html` file contains comments instructing you what to replace, you should follow these comments.
-- The `meta` tags in the `index.html` file are used to provide metadata about your paper 
-(e.g. helping search engine index the website, showing a preview image when sharing the website, etc.)
-- The resolution of images and videos can usually be around 1920-2048, there rarely a need for better resolution that take longer to load. 
-- All the images and videos you use should be compressed to allow for fast loading of the website (and thus better indexing by search engines). For images, you can use [TinyPNG](https://tinypng.com), for videos you can need to find the tradeoff between size and quality.
-- When using large video files (larger than 10MB), it's better to use youtube for hosting the video as serving the video from the website can take time.
-- Using a tracker can help you analyze the traffic and see where users came from. [statcounter](https://statcounter.com) is a free, easy to use tracker that takes under 5 minutes to set up. 
-- This project page can also be made into a github pages website.
-- Replace the favicon to one of your choosing (the default one is of the Hebrew University). 
-- Suggestions, improvements and comments are welcome, simply open an issue or contact me. You can find my contact information at [https://horwitz.ai](https://horwitz.ai)
 
 ## Acknowledgments
 Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
