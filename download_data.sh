@@ -9,7 +9,7 @@ DRIVE_FILE_ID="https://drive.google.com/drive/folders/1eepafGELvc_7SHXhLbE0VHEza
 OUTPUT_FILE="data.zip"
 
 echo "Downloading from Google Drive..."
-gdown --id $DRIVE_FILE_ID -O $OUTPUT_FILE
+gdown $DRIVE_FILE_ID -O $OUTPUT_FILE
 
 echo "Unzipping dataset..."
 unzip -q $OUTPUT_FILE -d data/
