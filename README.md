@@ -51,7 +51,7 @@ FIDeL detects, localizes, and semantically filters failures in real time, withou
 
 ---
 
-## 🗂️ Data Preparation (BotFails Dataset)
+## 🗂️ Data Preparation (Real-pi Dataset)
 
 Because the raw datasets and extracted features are too heavy for a standard Git repository, we host them externally.
 

@@ -5,7 +5,7 @@ echo "==========================================================="
 echo "Downloading Real-Pi Dataset (soldering_2)"
 echo "==========================================================="
 
-DRIVE_FILE_ID="https://drive.google.com/drive/folders/1eepafGELvc_7SHXhLbE0VHEzahou0CCk?usp=sharing"
+DRIVE_FILE_ID="https://drive.google.com/file/d/1XPgYZVfaYmQ1UjWWLLsdXj6I09h219gq/view?usp=sharing"
 OUTPUT_FILE="data.zip"
 
 echo "Downloading from Google Drive..."
