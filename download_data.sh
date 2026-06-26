@@ -12,7 +12,7 @@ echo "Downloading from Google Drive..."
 gdown $DRIVE_FILE_ID -O $OUTPUT_FILE
 
 echo "Unzipping dataset..."
-unzip -q $OUTPUT_FILE -d data/
+unzip -q $OUTPUT_FILE -d .
 rm $OUTPUT_FILE
 
 echo "==========================================================="
