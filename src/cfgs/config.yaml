@@ -1,0 +1,106 @@
+defaults:
+  - _self_
+  - ad_type: Representation # Representation, AE, lopO, logpZ0
+  - threshold_type: conformal_prediction_global # simple_gaussian, conformal_prediction_time, multi_gaussian_time, conformal_prediction_space, conformal_prediction_time, conformal_prediction_time_and_space
+
+# Root Dir
+root_dir: './'
+data_dir: '../data'
+weights_dir: './normal_latent_stats'
+encoder_features_dir: './normal_latent'
+result_dir: './results' 
+
+# misc
+seed: 2
+device: cuda
+save_video: false
+display_img_with_score: false
+use_VLM: false
+proj_net: False
+
+# robot
+robot: so100
+robot_config: Mono_manual
+demo_type: master_arm # teleop, master_arm, autom, kinest
+task_name: test
+
+# environment
+fps: 30
+env:
+  name: so100_real
+  task: null
+  state_dim: 6
+  action_dim: 6
+  fps: ${fps}
+
+camera: logitech_1 #logitech, logitech_1, logitech_2, logitech_top
+
+# experiment
+obs_type: 'img' # img, pose
+experiment: ${robot}_${robot_config}_${obs_type}_${task_name}_seed_${seed}
+
+# task
+task : soldering_2
+#domotic_pouringCoffee                   # logitech_1 
+#domotic_vegetablesAndFruitsSorting      # logitech_1 
+#domotic_dishTidyUp                      # logitech_1 
+#domotic_groceriesSorting                # logitech_1 
+#domotic_makingCoffee                    # logitech_1 
+#domotic_setTheTable                     # logitech_1 
+#industrial_robothon_buttons             # logitech_2  !! 
+#industrial_robothon_hatchAndProbe       # logitech_2  !!! 
+#industrial_screws_sorting               # logitech_2  !! 
+#industrial_soldering                    # logitech_1 
+
+# expert dataset
+train_dataset_id : ${task}_expert
+train_dataset_repo_id: ../data/${train_dataset_id}
+eval_dataset_id : ${task}_anomaly
+eval_dataset_repo_id: ../data/${eval_dataset_id}
+
+local_files_only: true
+
+#train_dataset_repo_id: null
+train_dataset_path: ../data/${train_dataset_id}
+
+# encoder
+encoder: resnet18 # dinoV2, SigLIP, resnet18, openVLA
+
+video_backend: pyav
+
+prompt: "Place one plastic waste in the brown box for plastics and one metal waste in the blue box for cans."
+#"grab the iron solder and solder the green electronic card, then put the iron back"
+#"grab the coffee jar and pour the coffee into the glass"
+#"put vegetables in the box with a yellow mark and fruits in the box with a pink mark" 
+#"grab the dishes and cutlery on the table and store them properly in the rack"
+#"put the vegetal items in the box with a pink mark and the sweets and cakes in the box with a yellow mark"
+#"grab the spoon and put some coffee powder inside the coffee machine"
+#"grab the dishes and cutlery and set the table, fork on the left, knife on the right"
+#"first press the red button then push the slide button up and press the blue button"
+#"open the hatch, grab the probe, measure tension in the first hole, place the probe in the black hole and close the hatch"
+#"puts short screws in the left plate and the long screws in the right plate"
+#"grab the iron, solder the yellow component to the electronic board and rests the iron"
+
+
+sample_length: 1
+use_action: False
+
+# training default values
+training:
+  batch_size: 32
+  nb_epoch: 2000
+  image_transforms:
+    enable: false
+
+
+# evaluation
+
+
+hydra:
+  run:
+    dir: ./exp_local/${now:%Y.%m.%d}/${now:%H%M%S}_${experiment}
+  sweep:
+    dir: ./exp/${now:%Y.%m.%d}/${now:%H%M}_${experiment}
+    subdir: ${hydra.job.num}
+
+

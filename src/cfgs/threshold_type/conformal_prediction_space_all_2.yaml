@@ -1,0 +1,9 @@
+# @package threshold
+_target_: threshold.conformal_prediction_space_all_2.ConformalPredictionSpaceAll2
+name: conformal_prediction_space_all_2
+
+alpha_default: 0.01 # confidence: 1 - alpha ; P(expert_score_t in [lower_t,upper_t]) >= 1-alpha
+alpha_all: [0.001, 0.01]
+split_rate: 0.25
+percentage_patch_detection_all: [0.003, 0.004, 0.005, 0.006, 0.007, 0.008, 0.009, 0.01]
+percentage_patch_detection_default: 0.008 # percentage of patch necessary to trieger a detection

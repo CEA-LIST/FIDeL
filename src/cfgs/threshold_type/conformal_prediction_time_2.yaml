@@ -1,0 +1,10 @@
+# @package threshold
+_target_: threshold.conformal_prediction_time.ConformalPredictionTime2
+name: conformal_prediction_time_2
+
+alpha: 0.2                 # niveau de rejet (1-alpha couverture)
+split_rate: 0.5             # proportion pour DcalA
+scal_variant: "std"          # "maxdev" | "mad" | "std"
+pool_over_time: "q90"        # "max" | "q90" | "q95" (temporal aggregation for h)
+seed: 123              # seed pour le split
+eps: 1e-6       

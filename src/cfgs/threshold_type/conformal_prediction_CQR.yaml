@@ -1,0 +1,14 @@
+# @package threshold
+_target_: threshold.conformal_prediction_CQR.ConformalPredictionCQR
+name: conformal_prediction_CQR
+
+alpha: 0.2        # niveau de rejet (1-alpha couverture)
+tau_hi: 0.9        # target conditional quantile (then conformalized)
+batch_size: 2048
+lr: 1e-3
+weight_decay: 0.0
+epochs: 50
+hidden: 64
+split_rate: 0.2    # split A/B pour (A: fit quantile) / (B: calibration)
+seed: 123
+eps: 1e-6

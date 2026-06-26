@@ -1,0 +1,5 @@
+# @package threshold
+_target_: threshold.max_threshold.Max_threshold
+name: max
+
+N: 20 # nb of timesteps around the current one which max will be included in the mean (+/-, so x2: [t-N;t+N])

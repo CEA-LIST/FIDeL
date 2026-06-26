@@ -1,0 +1,8 @@
+# @package threshold
+_target_: threshold.conformal_prediction_space.ConformalPredictionSpace
+name: conformal_prediction_space
+
+alpha: 0.2 # confidence: 1 - alpha ; P(expert_score_t in [lower_t,upper_t]) >= 1-alpha
+split_rate: 0.25
+percentage_patch_detection: 0.10
+scal_variant: variant1

@@ -1,0 +1,8 @@
+# @package threshold
+_target_: threshold.conformal_prediction_time_all.ConformalPredictionAll
+name: conformal_prediction_time_all
+
+alpha_default: 0.2 # confidence: 1 - alpha ; P(expert_score_t in [lower_t,upper_t]) >= 1-alpha
+alpha_all: [0.001, 0.01, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+split_rate: 0.25
+# split_rate_all: [0.25, 0.5, 0.75]

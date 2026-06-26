@@ -1,0 +1,29 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.env
+
+# Data and results
+data/
+results/
+exp/
+exp_local/
+
+# Hydra outputs
+.hydra/
+
+# VSCode
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Website elements
+index.html
+static/

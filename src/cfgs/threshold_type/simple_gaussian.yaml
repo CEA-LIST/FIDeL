@@ -1,0 +1,6 @@
+# @package threshold
+_target_: threshold.simple_gaussian.Simple_gaussian
+name: simple_gaussian
+
+alpha: 0.99 # confidence: 0.60, 0.95, 0.99        
+alpha_all: [1, 0.99, 0.95, 0.90, 0.80, 0.60]

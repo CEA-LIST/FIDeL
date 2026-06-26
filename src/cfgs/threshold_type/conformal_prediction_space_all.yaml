@@ -1,0 +1,22 @@
+# @package threshold
+_target_: threshold.conformal_prediction_space_all.ConformalPredictionSpaceAll
+name: conformal_prediction_space_all
+
+
+#alpha_default: 0.2 # confidence: 1 - alpha ; P(expert_score_t in [lower_t,upper_t]) >= 1-alpha
+#alpha_all: [0.001, 0.01, 0.1, 0.2, 0.3, 0.4, 0.5]
+#percentage_patch_detection_all: [0.004, 0.01, 0.1, 0.2, 0.3]
+#percentage_patch_detection_default: 0.10 # percentage of patch necessary to trieger a detection
+
+
+alpha_default: 0.2
+alpha_all: [0.2]
+percentage_patch_detection_all: [0.2]
+percentage_patch_detection_default: 0.2
+
+
+split_rate: 0.5             # proportion pour DcalA
+scal_variant: "std"          # "maxdev" | "mad" | "std"
+pool_over_time: "q90"        # "max" | "q90" | "q95" (temporal aggregation for h)
+seed: 123              # seed pour le split
+eps: 1e-6       

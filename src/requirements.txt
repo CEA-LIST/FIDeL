@@ -1,0 +1,33 @@
+# === Core Machine Learning & Vision ===
+torch
+torchvision
+numpy
+opencv-python
+Pillow
+einops
+
+# === Hugging Face & Vision-Language Models ===
+transformers
+qwen-vl-utils
+datasets
+huggingface_hub
+
+# === Configuration & Utilitaires ===
+hydra-core
+omegaconf
+tqdm
+psutil
+jsonlines
+zarr
+imagecodecs
+termcolor
+deepdiff
+h5py
+numcodecs
+nvidia-ml-py
+
+# === Mathématiques & Évaluation ===
+scikit-learn
+matplotlib
+POT 
+gdown

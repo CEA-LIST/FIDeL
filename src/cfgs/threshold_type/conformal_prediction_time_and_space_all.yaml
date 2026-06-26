@@ -1,0 +1,16 @@
+# @package threshold
+_target_: threshold.conformal_prediction_time_and_space_all.ConformalPredictionTimeAndSpaceAll
+name: conformal_prediction_time_and_space_all
+
+alpha_time: [0.01, 0.1, 0.2] # confidence: 1 - alpha ; P(expert_score_t in [lower_t,upper_t]) >= 1-alpha
+alpha_time_default: O.2
+alpha_space: [0.01, 0.1, 0.2]
+alpha_space_default: O.2
+scal_variant_time: variant2 # variant1: scalA(t)=1/T, variant2: scalA(t)=max_kinH|D_M(A_(k,t),O_(k,t),theta)-µ_t|
+scal_variant_space: variant2
+split_rate: [0.25, 0.5, 0.75]
+split_rate_default: 0.25
+percentage_patch_detection: [0.004, 0.01, 0.1, 0.3]
+percentage_patch_detection_default: 0.10 # percentage of patch necessary to trieger a detection
+time_AND_space: false
+time_OR_space: true

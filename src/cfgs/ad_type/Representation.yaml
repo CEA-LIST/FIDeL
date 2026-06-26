@@ -1,0 +1,12 @@
+# @package anomaly_detection
+_target_: anomaly_detection.Representation.RepresentationNet
+name: Representation
+
+# distance calculation
+distance_type: "euclidean" # euclidean, cosine, optimal_transport
+sinkhorn_rew_scale: 200
+
+# training
+proj_net: False
+nb_epoch: 1
+batch_size: 1

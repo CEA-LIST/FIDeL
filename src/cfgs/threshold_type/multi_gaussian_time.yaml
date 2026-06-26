@@ -1,0 +1,8 @@
+# @package threshold
+_target_: threshold.multi_gaussian.Multi_gaussian_time
+name: multi_gaussian_time
+
+alpha: 0.99 # confidence: 0.60, 0.95, 0.99
+alpha_all: [1, 0.99, 0.95, 0.90, 0.80, 0.60]
+N: 10     
+N_all: [0, 1, 5, 10, 20, 30]

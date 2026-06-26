@@ -1,0 +1,6 @@
+# @package threshold
+name: conformal_prediction_global
+
+alpha_default: 0.2 # confidence: 1 - alpha
+alpha_all: [0.1]
+split_rate: 0.25
