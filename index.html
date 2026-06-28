@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Failure  Identification  in  Imitation  Learning via  Statistical  and  Semantic  Filtering</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <!-- MathJax for LaTeX rendering -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+  </script>
+
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Failure  Identification  in  Imitation  Learning via  Statistical  and  Semantic  Filtering</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://quentinrolld.github.io/" target="_blank">Quentin Rolland</a><sup>1,2</sup></span>
+                <span class="author-block">
+                  <a href="https://fabricemdc.ocfmcreation.com/" target="_blank">Fabrice Mayran de Chamisso</a><sup>1</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://members.loria.fr/JBMouret/" target="_blank">Jean-Baptiste Mouret</a><sup>2,3</sup>
+              </span>
+            </div>
+
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Université Paris-Saclay, CEA, List, F-91120, Palaiseau, France</span><br>
+              <span class="author-block"><sup>2</sup>Inria, CNRS, Université de Lorraine, LORIA, F-54000 Nancy, France</span><br>
+              <span class="author-block"><sup>3</sup>Bleu Robotics, Paris, France</span>
+            </div>
+  
+            <div class="is-size-5 publication-authors">
+              <span class="author-block" style="font-weight: bold; color: #5a5a5a;">ICRA 2026</span>
+            </div>
+  
+            <div class="column has-text-centered">
+              <div class="publication-logos" style="display: flex; justify-content: center; align-items: center; gap: 40px; margin-top: 20px; flex-wrap: wrap;">
+                <img src="static/images/CEA.png" alt="CEA" style="height: 55px;">
+                <img src="static/images/Inria.png" alt="INRIA" style="height: 30px;">
+                <img src="static/images/Univ_lorraine.png" alt="Univ Lorraine" style="height: 40px;">
+                <img src="static/images/Univ_saclay.png" alt="Univ Saclay" style="height: 40px;">
+              </div>
+  
+              <div class="is-size-5">
+                <div class="conference-logo" style="margin-top: 30px;">
+                  <img src="static/images/ICRA_logo.png" alt="ICRA 2026" style="max-height: 160px; width: auto; max-width: 100%;">
+                </div>
+              </div>
+            </div>
+
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2604.13788" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                
+                <span class="link-block">
+                  <a href="https://huggingface.co/datasets/kantine/BotFails" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <span style="font-size: 1.2em;">🤗</span>
+                  </span>
+                  <span>Dataset</span>
+                  </a>
+                </span>
+
+                
+                <span class="link-block">
+                  <a href="https://github.com/CEA-LIST/FIDeL" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+
+
+
+                </span>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Video intro -->
+  <!--
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h2 class="title is-3"></h2>
+        <div id="videos-intro" class="intro results-intro" style="display: flex; justify-content: center;">
+          <div class="item item-video1" style="max-width: 100%; width: 80%;">
+            <video poster="" id="video1" autoplay controls muted loop
+              style="width: 100%; height: auto; border-radius: 10px;">
+
+              <source src="static/videos/intro.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
+  <!-- End video intro -->
+
+
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Imitation learning (IL) policies in robotics deliver strong performance in controlled settings but remain 
+              brittle in real-world deployments: rare events such as hardware faults, defective parts, unexpected human 
+              actions, or any state that lies outside the training distribution can lead to failed executions. 
+              Vision-based Anomaly Detection (AD) methods emerged as an appropriate solution to detect these anomalous 
+              failure states but do not distinguish failures from benign deviations. We introduce \(\textbf{FIDeL}\) 
+              (Failure Identification in Demonstration Learning), a policy-independent failure detection module. 
+              Leveraging recent AD methods, FIDeL builds a compact representation of nominal demonstrations and aligns 
+              incoming observations via optimal transport matching to produce anomaly scores and heatmaps. Spatio-temporal 
+              thresholds are derived with an extension of conformal prediction, and a Vision Language Model (VLM) performs 
+              semantic filtering to discriminate benign anomalies from genuine failures. We also introduce \(\textbf{BotFails}\), 
+              a multimodal dataset of real-world tasks for failure detection in robotics. FIDeL consistently outperforms 
+              state-of-the-art baselines, yielding \(+5.30\%\) AUROC in anomaly detection and \(+17.38\%\) failure-detection accuracy 
+              on BotFails compared to existing methods.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+  <!-- Teaser video-->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video poster="" id="tree" autoplay controls muted loop height="100%">
+          <!-- Your video here -->
+          <source src="static/videos/video_teaser.mp4" type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered">
+          We introduce FIDeL, a framework aimed at improving the reliability of Imitation
+          Learning-based policies. After having aggregated expert demonstrations representations, it continuously extracts anomaly
+          scores from real time policy-robot interactions. When a significant deviation is detected, the system flags a failure
+          and generates a heatmap to localize the failure.
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- End teaser video -->
+
+
+
+
+  <!-- Methodology -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Methodology</h2>
+          <div class="content has-text-justified">
+            <p>
+              Our method comprises two main stages: an offline preparation phase and an online inference phase. During
+              the offline phase, we process a dataset of expert demonstrations \( \mathcal{X}_N \), assumed to reflect
+              nominal behavior, by extracting feature representations from observations. These features are stored in a
+              memory buffer \( \mathcal{M} \), providing a compact statistical model of normal operation.
+              In the online phase, the AD module operates concurrently with the execution of the generative policy
+              \( f_\theta \). At each time step \( t \), the policy receives a multimodal observation \( O_t \) and
+              outputs an
+              action \( A_t = f_\theta(O_t) \). Prior to executing the action, \( O_t \) is encoded into the feature
+              space, and
+              an anomaly score is computed by comparing it to the distribution of features stored in \( \mathcal{M} \).
+              This
+              enables real-time monitoring of the system's behavior without interrupting the robot's control loop.
+              By decoupling the modeling of nominal behavior from online evaluation, the proposed two-stage architecture
+              ensures computational efficiency which enhance reliability by promptly detecting deviations from expected
+              operational patterns.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Methodology -->
+
+  <!-- Image section (just one image, no carousel) -->
+  <section class="hero is-light">
+    <div class="hero-body">
+      <div class="container">
+        <div class="single-image-display">
+          <div class="item">
+            <h2 class="title is-3"></h2>
+            <img src="static/images/method_big.png" alt="MY ALT TEXT" />
+            <h2 class="subtitle has-text-centered">
+              We introduce <strong>FIDeL</strong>, a framework for detecting failures in imitation learning (IL) policies. <br><br>
+              <strong>- Offline -</strong><br>
+              Expert demonstrations are first encoded and stored in a memory buffer \(\mathcal{M}\).<br>
+              <span style="color: #b8860b;"><strong>0. Conformal Prediction Calibration</strong></span> — A decision threshold is computed from \(\mathcal{M}\) using Conformal Prediction to determine when a score should be considered anomalous.<br><br>
+              <strong>- Online -</strong><br>
+              <span style="color: darkgreen;"><strong>1. Anomaly Detection</strong></span> — During policy execution, anomaly scores and heatmaps are computed from incoming observations.<br>
+              <span style="color: darkorange;"><strong>2. Thresholding</strong></span> — If the score exceeds the calibrated threshold, an anomaly is flagged.<br>
+              <span style="color: darkblue;"><strong>3. Semantic Filtering</strong></span> — Since not all anomalies are failure-related, a VLM filter discards benign deviations and flags only failures that threaten task success.
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experiments -->
+  <section class="section hero is-small">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">BotFails Dataset</h2>
+          <div class="content has-text-justified">
+            <p>
+              To rigorously evaluate the effectiveness of our AD approach, we introduce \( \textbf{BotFails} \), a
+              dedicated dataset specifically designed for robotic AD tasks. Our method is benchmarked on this dataset
+              alongside several
+              state-of-the-art baseline methods adapted to our experimental setting.
+              The BotFails dataset comprises a diverse set of tasks, each designed to represent a specific human
+              activity or interaction scenario within a controlled environment. In total, the dataset contains 414,359
+              annotated frames across
+              646 video sequences, offering a rich and varied benchmark for evaluating anomaly detection systems.
+              Each task in the dataset is associated with a predefined set of anomalous behaviors. These anomalies are
+              deliberately introduced to mimic realistic deviations from normal patterns, such as incorrect object
+              handling, wrong execution of the expected task, or unexpected presence of foreign objects.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Experiments -->
+
+
+  <!-- Image BotFails -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div class="single-image-display">
+          <div class="item">
+            <img src="static/images/BotFails.png" alt="MY ALT TEXT" />
+            <h2 class="subtitle has-text-centered">
+              We introduce BotFails, a new dataset specifically designed for one-class multimodal anomaly detection in
+              robotics, incorporating vision, proprioception, and natural language instructions.
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Results -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Results</h2>
+          <div class="content has-text-justified">
+            <p>
+              We evaluated FIDeL along with several SotA baselines on BotFails. FIDeL delivers the
+              highest
+              overall performance, achieving an average Weighted Accuracy of \( \textbf{78.65%} \) on BotFails and \( \textbf{77.71%}
+              \) on Real-\(\pi\),
+              exceeding the best-performing baseline, \( \textit{logpZ0} \), by more than 20 points in Weighted Accuracy.
+
+              AD modules suffer a sharp performance drop when benign anomalies are relabeled as nominal, especially in TNR; Adding semantic filtering significantly mitigates the TNR degradation, enabling more balanced detection (\( \textbf{85.8%}\) TPR / \( \textbf{74.8%}\) TNR). Fail-Detect tends to overpredict anomalies, as it cannot distinguish true failures from benign deviations, while Sentinel favors nominal predictions, likely missing failures that are purely visual and not reflected in proprioceptive signals. These results show that semantic filtering is crucial for reliable failure monitoring—avoiding unnecessary interventions while still capturing genuine failures.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Results -->
+
+  <!-- Histogram Results -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <div class="single-image-display">
+          <div class="item" style="max-width: 100%; width: 100%;">
+            <img src="static/images/end2end_results.png" alt="MY ALT TEXT" class="mx-auto"
+              style="max-width: 100%; height: auto;" />
+
+              <h2 class="subtitle has-text-centered">
+                <strong>End-to-end system evaluation (including semantic filtering)</strong> - accuracy (Acc) and weighted accuracy (W.Acc) for various robotics failure detection systems. The labeling is different for this evaluation. While AD and Threshold module are evaluated using <strong>anomaly labels</strong>, the end-to-end system is evaluated using <strong>failures labels</strong>. Which means that all failure-related anomaly labels remain 1, while non-failure anomalies are relabeled from 1 to 0. FiDeL = Representation + CP t&s + Semantic filtering
+              </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Heatmap Results -->
+  <section class="hero is-light">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <div class="single-image-display">
+          <div class="item" style="max-width: 100%; width: 100%;">
+            <img src="static/images/heatmaps_2.png" alt="MY ALT TEXT" class="mx-auto"
+              style="max-width: 100%; height: auto;" />
+
+              <h2 class="subtitle has-text-centered">
+                <strong>Heatmaps illustration</strong> - obtained using Representation AD and temporal/spatial CP - <strong>Real-\(\pi\)</strong>: ① expert, ② benign anomaly: screws present in the work plan, ③ failure: dropping the iron - <strong>BotFails</strong>: ④ expert, ⑤ benign anomaly: someone walking in the background (top left corner), ⑥ failure: spilling the cup.
+              </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Video Grid Section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">Results videos : FIDeL evaluation with the BotFails dataset</h2>
+      <div class="columns is-multiline is-centered">
+
+        <!-- Video Block -->
+        <div class="column is-half has-text-centered">
+          <figure>
+            <video controls muted loop autoplay width="100%">
+              <source src="static/videos/new_videos_fidel/pouring_coffee/pouring_coffee_normal.mp4" type="video/mp4">
+            </video>
+            <figcaption class="mt-2">Pouring coffee - Normal execution</figcaption>
+          </figure>
+        </div>
+
+        <div class="column is-half has-text-centered">
+          <figure>
+            <video controls muted loop autoplay width="100%">
+              <source src="static/videos/new_videos_fidel/pouring_coffee/pouring_coffee_failure_1.mp4" type="video/mp4">
+            </video>
+            <figcaption class="mt-2">Pouring coffee - Failed execution</figcaption>
+          </figure>
+        </div>
+
+        <div class="column is-half has-text-centered">
+          <figure>
+            <video controls muted loop autoplay width="100%">
+              <source src="static/videos/new_videos_fidel/making_coffee/making_coffee_failure_1.mp4" type="video/mp4">
+            </video>
+            <figcaption class="mt-2">Making coffee - Failed execution</figcaption>
+          </figure>
+        </div>
+
+        <!-- Add more videos the same way -->
+        <div class="column is-half has-text-centered">
+          <figure>
+            <video controls muted loop autoplay width="100%">
+              <source src="static/videos/new_videos_fidel/making_coffee/making_coffee_failure_2.mp4" type="video/mp4">
+            </video>
+            <figcaption class="mt-2">Making coffee - Failed execution</figcaption>
+          </figure>
+        </div>
+
+        <div class="column is-half has-text-centered">
+          <figure>
+            <video controls muted loop autoplay width="100%">
+              <source src="static/videos/new_videos_fidel/soldering/soldering_failure_1.mp4" type="video/mp4">
+            </video>
+            <figcaption class="mt-2">Soldering - Failed execution</figcaption>
+          </figure>
+        </div>
+
+        <div class="column is-half has-text-centered">
+          <figure>
+            <video controls muted loop autoplay width="100%">
+              <source src="static/videos/new_videos_fidel/soldering/soldering_failure_2.mp4" type="video/mp4">
+            </video>
+            <figcaption class="mt-2">Soldering</figcaption>
+          </figure>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  <!-- Youtube video -->
+  <!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      
+      <h2 class="title is-3">Video Presentation</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <div class="publication-video">
+            <iframe
+              width="100%"
+              height="480"
+              src="https://www.youtube.com/embed/izBMkmJwUgw?autoplay=1&mute=1"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+  <!-- End youtube video -->
+
+
+  <!-- Video carousel -->
+  <!--   <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Another Carousel</h2>
+        <div id="videos-carousel" class="carousel results-carousel">
+          <div class="item item-video1">
+            <video poster="" id="video1" autoplay controls muted loop height="100%">
+              
+              <source src="static/videos/carousel1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop height="100%">
+              
+              <source src="static/videos/carousel2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video3" autoplay controls muted loop height="100%">\
+              
+              <source src="static/videos/carousel3.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- End video carousel -->
+
+
+
+
+
+
+  <!-- Paper poster -->
+  <!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section> -->
+  <!--End paper poster -->
+
+
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{rolland2026failure,
+  title={Failure Identification in Imitation Learning via Statistical and Semantic Filtering},
+  author={Rolland, Quentin and Mayran de Chamisso, Fabrice and Mouret, Jean-Baptiste},
+  booktitle={IEEE International Conference on Robotics and Automation (ICRA)},
+  year={2026},
+}</code></pre>
+    </div>
+  </section>
+  <!--End BibTex citation -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the source code of this website, we just ask that you link back to this page in the
+              footer. <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>

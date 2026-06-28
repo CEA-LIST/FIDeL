@@ -24,6 +24,4 @@ exp_local/
 .DS_Store
 Thumbs.db
 
-# Website elements
-index.html
-static/
+
