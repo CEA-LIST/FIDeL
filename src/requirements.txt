@@ -1,6 +1,5 @@
 # === Core Machine Learning & Vision ===
-torch
-torchvision
+# Note: Install torch and torchvision separately according to your system's CUDA version.
 numpy
 opencv-python
 Pillow

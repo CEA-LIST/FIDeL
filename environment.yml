@@ -1,14 +1,7 @@
 name: fidel-env
 channels:
-  - pytorch
-  - nvidia
-  - defaults
   - conda-forge
+  - defaults
 dependencies:
   - python=3.10
   - pip
-  - pytorch
-  - torchvision
-  - pytorch-cuda=11.8 # Adjust based on your local CUDA version
-  - pip:
-    - -r src/requirements.txt

@@ -43,10 +43,22 @@ FIDeL detects, localizes, and semantically filters failures in real time, withou
    ```
 
 2. **Setup the Python Environment:**
-   You can quickly set up the virtual environment using the provided script:
+   Create and activate the base virtual environment:
    ```bash
    conda env create -f environment.yml
    conda activate fidel-env
+   ```
+
+3. **Install PyTorch:**
+   Install PyTorch according to your system's hardware (CPU, CUDA version, etc.). Please refer to the [official PyTorch installation page](https://pytorch.org/get-started/locally/) for the exact command. 
+   *Example for Linux with CUDA 11.8:*
+   ```bash
+   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+   ```
+
+4. **Install the remaining dependencies:**
+   ```bash
+   pip install -r src/requirements.txt
    ```
 
 ---
