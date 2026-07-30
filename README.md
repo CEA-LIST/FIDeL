@@ -84,7 +84,7 @@ You can run the full evaluation pipeline using the `main.py` script located in t
 
 ```bash
 cd src
-python main.py --task_name domotic_setTheTable_anomaly --labels_dir ../../Labels --score_dir ../results/score
+python main.py --task_name soldering_2_anomaly --labels_dir ../../Labels --score_dir ../results/score
 ```
 
 This single entry point will sequentially execute:
